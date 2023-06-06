@@ -19,7 +19,7 @@ git clone https://github.com/shimon-git/haproxy-vdi.git
 ```
 
 Make sure you have the required dependencies installed before running the script.
-#Dependencies
+## Dependencies
 The following dependencies are required to run haproxy-py:
 
   -  Python 3.x
