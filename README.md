@@ -8,3 +8,5 @@ this project used a DB named haproxy which contain 3 tables:
  haproxy-py create logs in the follwing path: /var/log/haproxy-py.log
  
  lets start with the setup:
+#clone the haproxy git
+`git clone https://github.com/shimon-git/haproxy-vdi.git`
