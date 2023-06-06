@@ -1,12 +1,19 @@
-# haproxy-py description
-this project combine haproxy and cwm API
-this project used a DB named haproxy which contain 3 tables:
-  1) API_KEYS - contain the api keys to execute commends in cwm
-  2) SERVERS - contein the: server_name,server_id,server_ip,server_sessions,backend,idle_time
-  3) MAPS - contain the user name that maps to the matching backend
- the haproxy-py is responsible to sync the haproxy DB, haproxy config with the cwm
- haproxy-py create logs in the follwing path: /var/log/haproxy-py.log
- 
- lets start with the setup:
-#clone the haproxy git
-`git clone https://github.com/shimon-git/haproxy-vdi.git`
+# haproxy-py
+
+This project combines HAProxy and CWM API to provide seamless integration and synchronization between them. The project utilizes a database called haproxy, which consists of three essential tables:
+
+1. **API_KEYS**: This table stores the API keys required to execute commands in the CWM.
+2. **SERVERS**: Contains information about the servers, including server_name, server_id, server_ip, server_sessions, backend, and idle_time.
+3. **MAPS**: Stores user names that are mapped to the corresponding backend.
+
+The haproxy-py script takes responsibility for synchronizing the haproxy database and configuration with the CWM. Additionally, it generates logs that can be found at the following path: `/var/log/haproxy-py.log`.
+
+Now, let's proceed with the setup:
+
+## Getting Started
+
+To begin, clone the haproxy repository using the following command:
+
+```shell
+git clone https://github.com/shimon-git/haproxy-vdi.git
+```
