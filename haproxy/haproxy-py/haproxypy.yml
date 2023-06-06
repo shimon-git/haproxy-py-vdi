@@ -30,14 +30,20 @@ haproxy_backend_config:
 global_servers:
   name: training.it
   network: 172.16.0.0
+  # put the USERNAME keyword where the username is on the global server names
+  # Example: training.it.shimon is: training.it.USERNAME
   username: training.it.USERNAME
 
 
 idle_time:
+  # server_on/suspended/off will represent the status of the servers that are in the state of on/suspended/off in the haproxy DB
   server_on: RUNNING
   server_suspended: SUSPENDED
   server_off: OFF
+  # timeout represents the timeout of idle time in minutes before it will be suspended
   timeout: 5
+  # interval represents the interval time for checking the state of the servers
   interval: 5
 
+# The sleep_checker represents the time to wait before checking if the CWM commands were completed successfully.
 sleep_checker: 12
