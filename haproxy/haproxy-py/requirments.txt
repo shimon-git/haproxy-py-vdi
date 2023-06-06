@@ -1,4 +1,0 @@
-requests
-PyYAML
-mysql-connector-python
-inspect
