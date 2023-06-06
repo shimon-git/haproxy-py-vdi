@@ -101,7 +101,7 @@ idle_time:
 sleep_checker: 12
 ```
 
-  -  haproxy_db_path: Specify the path to your haproxy database file.
+  -  dataplaneapi: Specify the endpoint and credentials for the dataplaneapi
   -  cwm_api_url: Provide the URL of your CWM API endpoint.
   -  cwm_api_key: Enter your API key for CWM authentication.
 
