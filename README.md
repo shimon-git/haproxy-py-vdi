@@ -78,7 +78,7 @@ Extract the dataplanapi and move the executable files to the bin folder:
 ```shell
 tar -zxvf dataplaneapi_2.7.5_Linux_x86_64.tar.gz
 sudo  +x cloudcli build/dataplaneapi
-sudo ild/dataplaneapi cloudcli /usr/local/bin
+sudo build/dataplaneapi cloudcli /usr/local/bin
 ```
 
 ### Overwrite on the haproxy default configuration:
@@ -127,11 +127,13 @@ Open the `haproxy/haproxy-py/haproxypy.yml` file and modify the following parame
 
 ## Usage
 
-To use efectivly in haproxy configure a crontab task to run the main.py scriopt:
+To effectively use haproxy-py with haproxy, you can configure a crontab task to run the main.py script at regular intervals. Follow these steps:
 
 ```shell
 crontab -e
-# Add this lines -- replace the 5 with the disired minutes. ***pay attention that the interval time and the crontab time are matching to avoid sync issue***
+
+#Note: Replace the 5 in */5 with your desired time interval in minutes.
+#Make sure that the interval matches the interval specified in the haproxypy.yml configuration file to avoid synchronization issues.
 */5 * * * * python3 /etc/haproxy/haproxy-py/main.py
 */5* * * * systemctl reload haproxy.service
 ```
