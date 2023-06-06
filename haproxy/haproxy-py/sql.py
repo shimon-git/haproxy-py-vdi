@@ -1,4 +1,3 @@
-#pip install mysql-connector-python
 import mysql.connector
 from logger import Logger
 class HaproxyDB():
