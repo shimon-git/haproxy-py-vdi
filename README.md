@@ -12,7 +12,7 @@ Now, let's proceed with the setup:
 
 ## Getting Started
 
-To begin, clone the haproxy repository using the following command:
+#### To begin, clone the haproxy repository using the following command:
 
 ```shell
 git clone https://github.com/shimon-git/haproxy-vdi.git
