@@ -25,7 +25,8 @@ The following dependencies are required to run haproxy-py:
   -  Python 3.x
   -  HAProxy
   -  CWM API
-To install Python dependencies, use the following command:
+
+### To install Python dependencies, use the following command:
 
 ```shell
 pip install -r requirements.txt
