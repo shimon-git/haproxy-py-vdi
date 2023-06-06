@@ -31,13 +31,13 @@ The following dependencies are required to run haproxy-py:
 pip install -r requirements.txt
 ```
 
-### To check if your HAProxy installation supports Lua, you can use the following command in the terminal:
+#### To check if your HAProxy installation supports Lua, you can use the following command in the terminal:
 
 ```shell
 haproxy -vv | grep Lua
 ```
 
-### This command will display the version information for Lua if it is enabled in your HAProxy installation. If Lua support is enabled, the output will look like this:
+#### This command will display the version information for Lua if it is enabled in your HAProxy installation. If Lua support is enabled, the output will look like this:
 
 ```shell
 Built with Lua version : Lua X.X.X
