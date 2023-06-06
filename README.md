@@ -47,3 +47,33 @@ haproxy_db_path = /path/to/haproxy.db
 cwm_api_url = https://api.example.com
 cwm_api_key = YOUR_API_KEY
 ```
+
+  -  haproxy_db_path: Specify the path to your haproxy database file.
+  -  cwm_api_url: Provide the URL of your CWM API endpoint.
+  -  cwm_api_key: Enter your API key for CWM authentication.
+
+## Usage
+
+To execute the haproxy-py script, run the following command:
+
+```shell
+python haproxy-py.py
+```
+
+# Logs
+
+The haproxy-py script generates logs during its operation. You can find the log file at the following location: `/var/log/haproxy-py.log
+`
+
+# Contributing
+
+We welcome contributions to the haproxy-py project. If you find any issues or have suggestions for improvements, please submit a pull request or open an issue on the project's GitHub repository.
+
+# License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it as per the license terms.
+
+
+We hope you find haproxy-py useful and enjoy using it in your environment. Should you have any questions or need assistance, please don't hesitate to contact us.
+
+
