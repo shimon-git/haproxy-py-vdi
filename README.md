@@ -18,6 +18,58 @@ Now, let's proceed with the setup:
 git clone https://github.com/shimon-git/haproxy-vdi.git
 ```
 
+### Donwnload Python3 and pip:
+
+```shell
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python3-pip
+```
+
+### Donwnload apache2,mysql,haproxy:
+
+```shell
+sudo apt install apache2
+sudo apt install mysql-server
+sudo systemctl enable apache2
+sudo systemctl enable mysql
+```
+
+### Configure and secure mysql:
+
+```shell
+mysql -u root
+use mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
+FLUSH PRIVILEGES;
+exit
+```
+
+#### Run the mysql_secure_installation script:
+
+```shell
+sudo mysql_secure_installation
+```
+
+### Initialize the haproxy Database:
+
+Edit the `init_db.sql` file:
+
+```shell
+cd haproxy-py-vdi
+vi init_db.sql
+```
+
+In line 32 replace this: `('API-ID', 'API-SECRET')` with your API-ID and your API-SECRET.
+
+connect to mysql and initialize the haporxy database:
+
+```shell
+mysql -u root -p
+source PATH/To/haproxy-vdi/init_db.sql
+```
+
+
 Make sure you have the required dependencies installed before running the script.
 ## Dependencies
 The following dependencies are required to run haproxy-py:
@@ -37,7 +89,7 @@ pip install -r requirements.txt
 haproxy -vv | grep Lua
 ```
 
-#### This command will display the version information for Lua if it is enabled in your HAProxy installation. If Lua support is enabled, the output will look like this:
+#### If Lua support is enabled, the output will look like this:
 
 ```shell
 Built with Lua version : Lua X.X.X
