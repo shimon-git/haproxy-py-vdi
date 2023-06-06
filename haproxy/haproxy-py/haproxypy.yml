@@ -1,0 +1,43 @@
+# dataplane api configurations
+dataplaneapi:
+  user: admin
+  password: adminpwd
+  host: 127.0.0.1
+  port: 5555
+
+# database conf
+DB:
+  host: 127.0.0.1
+  user: haproxy-py
+  password: Hh2023@!
+  database: haproxy
+  port: 3306
+  tables:
+    api_keys_table: API_KEYS
+    servers_table: SERVERS
+    map_table: MAPS
+
+# backends conf
+haproxy_backend_config:
+  mode: tcp
+  server_port: 3389
+  tcp_delay_inspection: 5
+  lua_action: turn_on_server
+  server_timeout: 50000
+  connect_timeout: 50
+
+# servers conf
+global_servers:
+  name: training.it
+  network: 172.16.0.0
+  username: training.it.USERNAME
+
+
+idle_time:
+  server_on: RUNNING
+  server_suspended: SUSPENDED
+  server_off: OFF
+  timeout: 5
+  interval: 5
+
+sleep_checker: 12
