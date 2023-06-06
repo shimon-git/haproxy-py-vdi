@@ -50,61 +50,6 @@ Before running the haproxy-py script, you need to configure the necessary settin
 Open the `haproxy/haproxy-py/haproxypy.yml` file and modify the following parameters according to your environment:
 
 
-```yaml
-# dataplane api configurations
-dataplaneapi:
-  user: admin
-  password: adminpwd
-  host: 127.0.0.1
-  port: 5555
-  
-  # database conf
-DB:
-  host: 127.0.0.1
-  user: haproxy-py
-  password: Hh2023@!
-  database: haproxy
-  port: 3306
-  tables:
-    api_keys_table: API_KEYS
-    servers_table: SERVERS
-    map_table: MAPS
-    
-# backends conf
-haproxy_backend_config:
-  mode: tcp
-  server_port: 3389
-  tcp_delay_inspection: 5
-  lua_action: turn_on_server
-  server_timeout: 50000
-  connect_timeout: 50
-
-# servers conf
-global_servers:
-  name: training.it
-  network: 172.16.0.0
-  # put the USERNAME keyword where the username is on the global server names --> training.it.shimon is: training.it.USERNAME
-  username: training.it.USERNAME
-  
-# idle time conf
-idle_time:
-  # server_on/suspended/off will represent the status of the servers that are in state of on/suspended/off in the haproxy DB
-  server_on: RUNNING
-  server_suspended: SUSPENDED
-  server_off: OFF
-  # timeout represent the timeout of idle time in minutes before it's will be suspended
-  timeout: 5
-  # interval represent the interval time for checking the state  of the servers
-  interval: 5
-  
-# The sleep_checker represents the time to wait before checking if the CWM commands were completed successfully.
-sleep_checker: 12
-```
-
-  -  dataplaneapi: Specify the endpoint and credentials for the dataplaneapi
-  -  cwm_api_url: Provide the URL of your CWM API endpoint.
-  -  cwm_api_key: Enter your API key for CWM authentication.
-
 ## Usage
 
 To execute the haproxy-py script, run the following command:
