@@ -75,8 +75,8 @@ global_servers:
   # put the USERNAME keyword where the username is on the global server names --> training.it.shimon is: training.it.USERNAME
   username: training.it.USERNAME
   
-  # idle time conf
-  idle_time:
+# idle time conf
+idle_time:
   # server_on/suspended/off will represent the status of the servers that are in state of on/suspended/off in the haproxy DB
   server_on: RUNNING
   server_suspended: SUSPENDED
@@ -87,7 +87,7 @@ global_servers:
   interval: 5
   
 # The sleep_checker represents the time to wait before checking if the CWM commands were completed successfully.
-  sleep_checker: 12
+sleep_checker: 12
 ```
 
   -  haproxy_db_path: Specify the path to your haproxy database file.
