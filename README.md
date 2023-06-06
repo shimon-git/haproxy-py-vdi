@@ -15,7 +15,7 @@ Now, let's proceed with the setup:
 #### To begin, clone the haproxy repository using the following command:
 
 ```shell
-git clone https://github.com/shimon-git/haproxy-vdi.git
+git clone https://github.com/shimon-git/haproxy-py-vdi.git
 ```
 
 ### Donwnload Python3 and pip:
@@ -31,8 +31,10 @@ sudo apt install python3-pip
 ```shell
 sudo apt install apache2
 sudo apt install mysql-server
+sudo apt install haproxy
 sudo systemctl enable apache2
 sudo systemctl enable mysql
+sudo systemctl enable haproxy
 ```
 
 ### Configure and secure mysql:
@@ -66,9 +68,30 @@ connect to mysql and initialize the haporxy database:
 
 ```shell
 mysql -u root -p
-source PATH/To/haproxy-vdi/init_db.sql
+source PATH/To/haproxy-py-vdi/init_db.sql
 ```
 
+### Move the executable files to the bin folder:
+
+Extract the dataplanapi and move the executable files to the bin folder:
+
+```shell
+tar -zxvf dataplaneapi_2.7.5_Linux_x86_64.tar.gz
+sudo  +x cloudcli build/dataplaneapi
+sudo ild/dataplaneapi cloudcli /usr/local/bin
+```
+
+### Overwrite on the haproxy default configuration:
+
+```shell
+sudo  haproxy-py-vdi/haproxy/. /etc/haproxy/
+```
+
+### Restart the haproxy service
+
+```shell
+sudo systemctl restart haproxy
+```
 
 Make sure you have the required dependencies installed before running the script.
 ## Dependencies
@@ -104,10 +127,13 @@ Open the `haproxy/haproxy-py/haproxypy.yml` file and modify the following parame
 
 ## Usage
 
-To execute the haproxy-py script, run the following command:
+To use efectivly in haproxy configure a crontab task to run the main.py scriopt:
 
 ```shell
-python haproxy-py.py
+crontab -e
+# Add this lines -- replace the 5 with the disired minutes. ***pay attention that the interval time and the crontab time are matching to avoid sync issue***
+*/5 * * * * python3 /etc/haproxy/haproxy-py/main.py
+*/5* * * * systemctl reload haproxy.service
 ```
 
 # Logs
