@@ -35,7 +35,8 @@ pip install -r requirements.txt
 Please refer to the official documentation for HAProxy and CWM API installation instructions.
 
 ## Configuration
-Before running the haproxy-py script, you need to configure the necessary settings. Open the config.ini file and modify the following parameters according to your environment:
+Before running the haproxy-py script, you need to configure the necessary settings.
+Open the config.ini file and modify the following parameters according to your environment:
 
 
 ```yaml
