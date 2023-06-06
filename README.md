@@ -104,7 +104,10 @@ python haproxy-py.py
 
 # Logs
 
-The haproxy-py script generates logs during its operation. You can find the log file at the following location: `/var/log/haproxy-py.log
+The haproxy-py script generates logs during its operation. You can find the log file at the following location:
+
+`
+/var/log/haproxy-py.log
 `
 
 # Contributing
