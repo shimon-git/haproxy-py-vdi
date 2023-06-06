@@ -22,9 +22,8 @@ Make sure you have the required dependencies installed before running the script
 ## Dependencies
 The following dependencies are required to run haproxy-py:
 
-  -  Python 3.7 or later
-  -  HAProxy
-  -  CWM API
+  -  **Python 3.7 or later**
+  -  **HAProxy Built with Lua version**
 
 #### To install Python dependencies, use the following command:
 
