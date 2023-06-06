@@ -1,4 +1,4 @@
-# haproxy-py
+# haproxy-py teimani
 
 This project combines HAProxy and CWM API to provide seamless integration and synchronization between them. The project utilizes a database called haproxy, which consists of three essential tables:
 
