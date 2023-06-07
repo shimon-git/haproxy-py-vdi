@@ -1,6 +1,6 @@
 config_version = 2
 
-name = "training.it.shimon-haproxy-rdp"
+name = "dataplaneapi"
 
 mode = "single"
 
