@@ -18,7 +18,7 @@ Now, let's proceed with the setup:
 git clone https://github.com/shimon-git/haproxy-py-vdi.git
 ```
 
-### Donwnload Python3 and pip:
+### Download Python3 and pip:
 
 ```shell
 sudo apt update
@@ -26,7 +26,7 @@ sudo apt install python3-pip
 sudo apt install python3-pip
 ```
 
-### Donwnload apache2,mysql,haproxy:
+### Download apache2,mysql,haproxy:
 
 ```shell
 sudo apt install apache2
@@ -122,7 +122,7 @@ Please refer to the official documentation for HAProxy and CWM API installation 
 
 ## Configuration
 Before running the haproxy-py script, you need to configure the necessary settings.
-Open the `haproxy/haproxy-py/haproxypy.yml` file and modify the following parameters according to your environment:
+Open the `/etc/haproxy/haproxy-py/haproxypy.yml` file and modify the following parameters according to your environment:
 
 
 ## Usage
