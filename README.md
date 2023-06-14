@@ -1,6 +1,6 @@
 # haproxy-py-vdi
 
-This project combines HAProxy and CWM API to provide seamless integration and synchronization between them. The project utilizes a database called haproxy, which consists of three essential tables:
+This project (Made by OMC Yemen Shimon) combines HAProxy and CWM API to provide seamless integration and synchronization between them. The project utilizes a database called haproxy, which consists of three essential tables:
 
 1. **API_KEYS**: This table stores the API keys required to execute commands in the CWM.
 2. **SERVERS**: Contains information about the servers, including server_name, server_id, server_ip, server_sessions, backend, and idle_time.
