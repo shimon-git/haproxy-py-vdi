@@ -146,6 +146,21 @@ The haproxy-py script generates logs during its operation. You can find the log 
 /var/log/haproxy-py.log
 `
 
+# Helpers
+
+Since the backend maps is rely on the RDP-Cookies, in case you want to replace a user,
+You may be neet to clear the RDP-Coockies from you computer:
+
+```powershell
+# Put here the server IP in the Rdp configuration
+$serverIP = "45.93.94.241"
+# put here the new username that you wish to connect to 
+$userName = "dummyUser@dummyDomain.local"
+#clear the RDP-Coockies
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Terminal Server Client\Default" -Name "MRU0" -Value $userName
+set-ItemProperty -Path "HKCU:\Software\Microsoft\Terminal Server Client\Servers\$serverIP\" -Name "UsernameHint" -Value $userName
+```
+
 # Contributing
 
 We welcome contributions to the haproxy-py project. If you find any issues or have suggestions for improvements, please submit a pull request or open an issue on the project's GitHub repository.
