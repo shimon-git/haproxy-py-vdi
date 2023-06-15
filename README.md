@@ -151,6 +151,7 @@ The haproxy-py script generates logs during its operation. You can find the log 
 Since the backend maps is rely on the RDP-Cookies, in case you want to replace a user,
 You may be neet to clear the RDP-Coockies from you computer:
 
+`powershell`
 ```powershell
 # Put here the server IP in the Rdp configuration
 $serverIP = "45.93.94.241"
