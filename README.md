@@ -77,14 +77,14 @@ Extract the dataplanapi and move the executable files to the bin folder:
 
 ```shell
 tar -zxvf dataplaneapi_2.7.5_Linux_x86_64.tar.gz
-sudo  +x cloudcli build/dataplaneapi
-sudo build/dataplaneapi cloudcli /usr/local/bin
+chmod +x cloudcli build/dataplaneapi
+cp build/dataplaneapi cloudcli /usr/local/bin
 ```
 
 ### Overwrite on the haproxy default configuration:
 
 ```shell
-sudo  haproxy-py-vdi/haproxy/. /etc/haproxy/
+cp -r haproxy-py-vdi/haproxy/. /etc/haproxy/
 ```
 
 ### Restart the haproxy service
