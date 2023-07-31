@@ -103,7 +103,7 @@ The following dependencies are required to run haproxy-py:
 #### To install Python dependencies, use the following command:
 
 ```shell
-pip install -r requirements.txt
+pip install -r requirments.txt
 ```
 
 #### To check if your HAProxy installation supports Lua, you can use the following command in the terminal:
