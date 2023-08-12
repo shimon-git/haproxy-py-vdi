@@ -22,7 +22,7 @@ git clone https://github.com/shimon-git/haproxy-py-vdi.git
 
 ```shell
 sudo apt update
-sudo apt install python3-pip
+sudo apt install python3
 sudo apt install python3-pip
 ```
 
