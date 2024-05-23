@@ -188,14 +188,14 @@ class servers():
             self.haDB.update_server_data('server_id',server_id,'idle_time',self.idle_time[server_status])
 
     def suspend_servers(self):
-         for server_id in self.suspend_servers_list:
+        for server_id in self.suspend_servers_list:
             self.log.info(f'Sending API request to suspend the server. (server id: {server_id})')
             self.cwm_command(command='server suspend', server_id=server_id)
-         
-         sleep(self.sleep_checker)
-         for server_id in self.suspend_servers_list:
-             server_status = self.get_server_status(server_id)
-             if server_status != None:
+        
+        sleep(self.sleep_checker)
+        for server_id in self.suspend_servers_list:
+            server_status = self.get_server_status(server_id)
+            if server_status != None:
                 self.haDB.update_server_data('server_id',server_id,'server_status',server_status)
                 self.haDB.update_server_data('server_id',server_id,'idle_time',self.idle_time[server_status])
 
